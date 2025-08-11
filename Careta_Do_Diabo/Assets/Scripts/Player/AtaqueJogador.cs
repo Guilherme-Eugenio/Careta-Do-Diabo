@@ -42,9 +42,21 @@ public sealed class AtaqueJogador : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, Vector2.right * 1.4f);
-
+        if(jogador.estaPulando && Input.GetKey(KeyCode.S))
+        {
+            jogador.DetectorInimigo = Physics2D.Raycast(transform.position, Vector2.down, 1.4f, LayerMask.GetMask("Inimigo"));
+        }
+        else
+        {
+            if(!jogador.Spr.flipX)
+            {
+                jogador.DetectorInimigo = Physics2D.Raycast(transform.position, Vector2.right, 1.4f, LayerMask.GetMask("Inimigo"));
+            }
+            else
+            {
+                jogador.DetectorInimigo = Physics2D.Raycast(transform.position, Vector2.left, 1.4f, LayerMask.GetMask("Inimigo"));
+            }            
+        }
     }
 
 }
