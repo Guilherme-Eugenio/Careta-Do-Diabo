@@ -5,6 +5,7 @@ public sealed class ControleJogador : MonoBehaviour
     [Header("Componentes")]
     [SerializeField] private Rigidbody2D rig;
     [SerializeField] private BoxCollider2D box;
+    [SerializeField] private SpriteRenderer spr;
 
     [Header("Atributos")]
     [SerializeField] private float velocidade;
@@ -16,13 +17,19 @@ public sealed class ControleJogador : MonoBehaviour
     private bool jogadorAtacando;
     private bool podeAtacar = true;
 
+    //Constantes
+    [SerializeField] private float tamanhoAtaque;
+
     //Atributos de fisica
     private RaycastHit2D detectorChao;
-    private RaycastHit2D detectorInimigo;
+    private RaycastHit2D hitInimigo;
+
+    //-----------------------------------------------------------------------------------------
 
     //Propriedades dos Componentes
     public Rigidbody2D Rig { get => rig; set => rig = value; }
     public BoxCollider2D Box { get => box; }
+    public SpriteRenderer Spr { get => spr; set => spr = value; }
 
     //Propriedade dos atributos
     public float Velocidade { get => velocidade; }
@@ -36,5 +43,8 @@ public sealed class ControleJogador : MonoBehaviour
 
     //Propriedades de Física
     public RaycastHit2D DetectorChao { get => detectorChao; set => detectorChao = value; }
-    public RaycastHit2D DetectorInimigo { get => detectorInimigo; set => detectorInimigo = value; }
+    public RaycastHit2D HitInimigo { get => hitInimigo; set => hitInimigo = value; }
+
+    //Propriedades constantes
+    public float TamanhoAtaque { get => tamanhoAtaque; }
 }

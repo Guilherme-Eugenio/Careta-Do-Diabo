@@ -25,6 +25,15 @@ public sealed class MovimentacaoJogador : MonoBehaviour
         float dirX = Input.GetAxisRaw("Horizontal");
 
         jogador.Rig.linearVelocityX = dirX * jogador.Velocidade;
+
+        if (dirX > 0)
+        {
+            jogador.Spr.flipX = false;
+        }
+        else if (dirX < 0)
+        {
+            jogador.Spr.flipX = true;
+        }
     }
 
     private void Pulo()

@@ -27,12 +27,7 @@ public sealed class AtaqueJogador : MonoBehaviour
             jogador.JogadorAtacando = false;
             jogador.PodeAtacar = false;
 
-            jogador.DetectorInimigo = Physics2D.Raycast(transform.position, Vector2.right, 1.4f, LayerMask.GetMask("Inimigo"));
-
-            if (jogador.DetectorInimigo.collider != null)
-            {
-                Debug.Log(jogador.DetectorInimigo.collider.gameObject.name);
-            }
+            DetectarInimigo();
 
             yield return new WaitForSeconds(.5f);
 
@@ -40,23 +35,53 @@ public sealed class AtaqueJogador : MonoBehaviour
         }
     }
 
-    void OnDrawGizmos()
+    private void DirecaoAtaque()
     {
-        if(jogador.estaPulando && Input.GetKey(KeyCode.S))
+        if (jogador.EstaPulando && Input.GetKey(KeyCode.S))
         {
-            jogador.DetectorInimigo = Physics2D.Raycast(transform.position, Vector2.down, 1.4f, LayerMask.GetMask("Inimigo"));
+            jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.down, jogador.TamanhoAtaque, LayerMask.GetMask("Inimigo"));
         }
         else
         {
-            if(!jogador.Spr.flipX)
+            if (!jogador.Spr.flipX)
             {
-                jogador.DetectorInimigo = Physics2D.Raycast(transform.position, Vector2.right, 1.4f, LayerMask.GetMask("Inimigo"));
+                jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.right, jogador.TamanhoAtaque, LayerMask.GetMask("Inimigo"));
             }
             else
             {
-                jogador.DetectorInimigo = Physics2D.Raycast(transform.position, Vector2.left, 1.4f, LayerMask.GetMask("Inimigo"));
-            }            
+                jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.left, jogador.TamanhoAtaque, LayerMask.GetMask("Inimigo"));
+            }
         }
     }
 
+    private void DetectarInimigo()
+    {
+        DirecaoAtaque();
+
+        if (jogador.HitInimigo.collider != null)
+        {
+            Debug.Log(jogador.HitInimigo.collider.gameObject.name);
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        
+        if (jogador.EstaPulando && Input.GetKey(KeyCode.S))
+        {
+            Gizmos.DrawRay(transform.position, Vector2.down * jogador.TamanhoAtaque);
+        }
+        else
+        {
+            if (!jogador.Spr.flipX)
+            {               
+                Gizmos.DrawRay(transform.position, Vector2.right * jogador.TamanhoAtaque);
+            }
+            else
+            {                
+                Gizmos.DrawRay(transform.position, Vector2.left * jogador.TamanhoAtaque);
+            }
+        }
+    }
 }
