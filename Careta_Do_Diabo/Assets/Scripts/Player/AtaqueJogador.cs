@@ -39,17 +39,17 @@ public sealed class AtaqueJogador : MonoBehaviour
     {
         if (jogador.EstaPulando && Input.GetKey(KeyCode.S))
         {
-            jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.down, jogador.TamanhoAtaque, LayerMask.GetMask("Inimigo"));
+            jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.down, ControleJogador.tamanhoAtaque, LayerMask.GetMask("Inimigo"));
         }
         else
         {
             if (!jogador.Spr.flipX)
             {
-                jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.right, jogador.TamanhoAtaque, LayerMask.GetMask("Inimigo"));
+                jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.right, ControleJogador.tamanhoAtaque, LayerMask.GetMask("Inimigo"));
             }
             else
             {
-                jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.left, jogador.TamanhoAtaque, LayerMask.GetMask("Inimigo"));
+                jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.left, ControleJogador.tamanhoAtaque, LayerMask.GetMask("Inimigo"));
             }
         }
     }
@@ -70,17 +70,17 @@ public sealed class AtaqueJogador : MonoBehaviour
         
         if (jogador.EstaPulando && Input.GetKey(KeyCode.S))
         {
-            Gizmos.DrawRay(transform.position, Vector2.down * jogador.TamanhoAtaque);
+            Gizmos.DrawRay(transform.position, Vector2.down * ControleJogador.tamanhoAtaque);
         }
         else
         {
             if (!jogador.Spr.flipX)
             {               
-                Gizmos.DrawRay(transform.position, Vector2.right * jogador.TamanhoAtaque);
+                Gizmos.DrawRay(transform.position, Vector2.right * ControleJogador.tamanhoAtaque);
             }
             else
             {                
-                Gizmos.DrawRay(transform.position, Vector2.left * jogador.TamanhoAtaque);
+                Gizmos.DrawRay(transform.position, Vector2.left * ControleJogador.tamanhoAtaque);
             }
         }
     }

@@ -10,15 +10,19 @@ public sealed class ControleJogador : MonoBehaviour
     [Header("Atributos")]
     [SerializeField] private float velocidade;
     [SerializeField] private float forcaPulo;
+    [SerializeField] private float tamanhoAvanco;
+    [SerializeField] private float tempoAvanco;
 
     //Atrributos de controle
     private bool estaPulando;
     private bool podePular;
     private bool jogadorAtacando;
+    private bool avanco;
+    private bool podeAvancar;
     private bool podeAtacar = true;
 
     //Constantes
-    [SerializeField] private float tamanhoAtaque;
+    public const float tamanhoAtaque= 1.3f;
 
     //Atributos de fisica
     private RaycastHit2D detectorChao;
@@ -34,17 +38,18 @@ public sealed class ControleJogador : MonoBehaviour
     //Propriedade dos atributos
     public float Velocidade { get => velocidade; }
     public float ForcaPulo { get => forcaPulo; }
+    public float TamanhoAvanco { get => tamanhoAvanco; }
+    public float TempoAvanco { get => tempoAvanco; }
 
     //Propriedade de Controle
     public bool EstaPulando { get => estaPulando; set => estaPulando = value; }
     public bool PodePular { get => podePular; set => podePular = value; }
     public bool JogadorAtacando { get => jogadorAtacando; set => jogadorAtacando = value; }
+    public bool Avanco { get => avanco; set => avanco = value; }
+    public bool PodeAvancar { get => podeAvancar; set => podeAvancar = value; }
     public bool PodeAtacar { get => podeAtacar; set => podeAtacar = value; }
 
     //Propriedades de Física
     public RaycastHit2D DetectorChao { get => detectorChao; set => detectorChao = value; }
     public RaycastHit2D HitInimigo { get => hitInimigo; set => hitInimigo = value; }
-
-    //Propriedades constantes
-    public float TamanhoAtaque { get => tamanhoAtaque; }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(ControleJogador))]
@@ -9,6 +10,7 @@ public sealed class MovimentacaoJogador : MonoBehaviour
     {
         DetectorChao();
         Movimentacao();
+        Avanco();
         Pulo();
     }
 
@@ -18,21 +20,30 @@ public sealed class MovimentacaoJogador : MonoBehaviour
         {
             jogador.PodePular = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.Q) && !jogador.Avanco)
+        {
+            jogador.PodeAvancar = true;
+        }
     }
 
     private void Movimentacao()
     {
-        float dirX = Input.GetAxisRaw("Horizontal");
-
-        jogador.Rig.linearVelocityX = dirX * jogador.Velocidade;
-
-        if (dirX > 0)
+        if (!jogador.Avanco)
         {
-            jogador.Spr.flipX = false;
-        }
-        else if (dirX < 0)
-        {
-            jogador.Spr.flipX = true;
+            float dirX = Input.GetAxisRaw("Horizontal");
+
+            jogador.Rig.linearVelocityX = dirX * jogador.Velocidade;
+
+            if (dirX > 0)
+            {
+                jogador.Spr.flipX = false;
+            }   
+            else if (dirX < 0)
+            {
+                jogador.Spr.flipX = true;
+            
+            }
         }
     }
 
@@ -46,9 +57,57 @@ public sealed class MovimentacaoJogador : MonoBehaviour
         }
     }
 
+    private void Avanco()
+    {
+        StartCoroutine(ControleAvanco());
+    }
+
+    private IEnumerator ControleAvanco()
+    {
+        if (jogador.PodeAvancar)
+        {
+            Debug.Log("Aa");
+            jogador.PodeAvancar = false;
+            jogador.Avanco = true;
+
+            if (!jogador.Spr.flipX)
+            {
+                StartCoroutine(TempoAvancoControle());
+
+                while (jogador.Avanco)
+                {
+                    Debug.Log("Avanco");
+                    jogador.Rig.linearVelocityX += 10;
+
+                    yield return new WaitForSeconds(.5f);
+                }                
+            }
+            else
+            {
+                StartCoroutine(TempoAvancoControle());
+
+                while (jogador.Avanco)
+                {
+                    Debug.Log("Avanco");
+                    jogador.Rig.linearVelocityX -= 10;
+
+                    yield return new WaitForSeconds(.5f);
+                }   
+            }
+        }
+
+    }
+
+    private IEnumerator TempoAvancoControle()
+    {
+        yield return new WaitForSeconds(jogador.TempoAvanco);
+
+        jogador.Avanco = false;
+    }
+
     private void DetectorChao()
     {
-        jogador.DetectorChao = Physics2D.BoxCast(jogador.Box.bounds.center, jogador.Box.bounds.size, 0f, Vector2.down, .1f,LayerMask.GetMask("Chao"));
+        jogador.DetectorChao = Physics2D.BoxCast(jogador.Box.bounds.center, jogador.Box.bounds.size, 0f, Vector2.down, .1f, LayerMask.GetMask("Chao"));
 
         if (jogador.DetectorChao.collider == null)
         {
