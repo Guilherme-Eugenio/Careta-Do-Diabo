@@ -8,9 +8,10 @@ public sealed class ControleJogador : MonoBehaviour
     [SerializeField] private SpriteRenderer spr;
 
     [Header("Atributos")]
+    [SerializeField] private int vida;
+
     [SerializeField] private float velocidade;
     [SerializeField] private float forcaPulo;
-    [SerializeField] private float tamanhoAvanco;
     [SerializeField] private float tempoAvanco;
 
     //Atrributos de controle
@@ -36,9 +37,10 @@ public sealed class ControleJogador : MonoBehaviour
     public SpriteRenderer Spr { get => spr; set => spr = value; }
 
     //Propriedade dos atributos
+    public int Vida { get => vida; set => vida = value; }
+
     public float Velocidade { get => velocidade; }
     public float ForcaPulo { get => forcaPulo; }
-    public float TamanhoAvanco { get => tamanhoAvanco; }
     public float TempoAvanco { get => tempoAvanco; }
 
     //Propriedade de Controle
