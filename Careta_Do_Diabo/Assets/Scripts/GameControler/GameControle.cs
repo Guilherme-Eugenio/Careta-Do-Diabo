@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class GameControle : MonoBehaviour
 {
@@ -20,5 +21,13 @@ public sealed class GameControle : MonoBehaviour
         }
     }
 
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
 
 }
