@@ -6,6 +6,7 @@ public sealed class ControleJogador : MonoBehaviour
     [SerializeField] private Rigidbody2D rig;
     [SerializeField] private BoxCollider2D box;
     [SerializeField] private SpriteRenderer spr;
+    [SerializeField] private Animator anim;
 
     [Header("Atributos")]
     [SerializeField] private int vida;
@@ -23,7 +24,7 @@ public sealed class ControleJogador : MonoBehaviour
     private bool podeAtacar = true;
 
     //Constantes
-    public const float tamanhoAtaque= 1.3f;
+    public const float tamanhoAtaque = 2.5f;
 
     //Atributos de fisica
     private RaycastHit2D detectorChao;
@@ -32,8 +33,9 @@ public sealed class ControleJogador : MonoBehaviour
     //-----------------------------------------------------------------------------------------
 
     //Propriedades dos Componentes
-    public Rigidbody2D Rig { get => rig; set => rig = value; }
     public BoxCollider2D Box { get => box; }
+    public Animator Anim { get => anim; }
+    public Rigidbody2D Rig { get => rig; set => rig = value; }
     public SpriteRenderer Spr { get => spr; set => spr = value; }
 
     //Propriedade dos atributos

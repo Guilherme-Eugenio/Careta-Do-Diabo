@@ -27,9 +27,14 @@ public sealed class AtaqueJogador : MonoBehaviour
             jogador.JogadorAtacando = false;
             jogador.PodeAtacar = false;
 
+            jogador.Anim.SetBool(HashCodesAnimator.correndoAnim, false);
+            jogador.Anim.SetBool(HashCodesAnimator.atacandoAnim, true);
+
             DetectarInimigo();
 
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.3f);
+
+            jogador.Anim.SetBool(HashCodesAnimator.atacandoAnim, false);
 
             jogador.PodeAtacar = true;
         }
@@ -61,6 +66,8 @@ public sealed class AtaqueJogador : MonoBehaviour
         if (jogador.HitInimigo.collider != null)
         {
             Debug.Log(jogador.HitInimigo.collider.gameObject.name);
+
+            jogador.HitInimigo.collider.GetComponent<Inimigo>().LevouDano();
         }
     }
 

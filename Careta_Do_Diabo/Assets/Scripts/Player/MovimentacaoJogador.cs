@@ -21,7 +21,7 @@ public sealed class MovimentacaoJogador : MonoBehaviour
             jogador.PodePular = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && !jogador.Avanco)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !jogador.Avanco)
         {
             jogador.PodeAvancar = true;
         }
@@ -29,7 +29,7 @@ public sealed class MovimentacaoJogador : MonoBehaviour
 
     private void Movimentacao()
     {
-        if (!jogador.Avanco)
+        if (!jogador.Avanco && !jogador.JogadorAtacando)
         {
             float dirX = Input.GetAxisRaw("Horizontal");
 
@@ -38,11 +38,18 @@ public sealed class MovimentacaoJogador : MonoBehaviour
             if (dirX > 0)
             {
                 jogador.Spr.flipX = false;
-            }   
+
+                jogador.Anim.SetBool(HashCodesAnimator.correndoAnim, true);
+            }
             else if (dirX < 0)
             {
                 jogador.Spr.flipX = true;
-            
+
+                jogador.Anim.SetBool(HashCodesAnimator.correndoAnim, true);
+            }
+            else
+            {
+                jogador.Anim.SetBool(HashCodesAnimator.correndoAnim, false);                
             }
         }
     }
@@ -59,40 +66,23 @@ public sealed class MovimentacaoJogador : MonoBehaviour
 
     private void Avanco()
     {
-        StartCoroutine(ControleAvanco());
-    }
-
-    private IEnumerator ControleAvanco()
-    {
         if (jogador.PodeAvancar)
         {
             Debug.Log("Aa");
             jogador.PodeAvancar = false;
             jogador.Avanco = true;
 
+            jogador.Anim.SetBool(HashCodesAnimator.dashAnim, true);
+
+            StartCoroutine(TempoAvancoControle());
+
             if (!jogador.Spr.flipX)
             {
-                StartCoroutine(TempoAvancoControle());
-
-                while (jogador.Avanco)
-                {
-                    Debug.Log("Avanco");
-                    jogador.Rig.linearVelocityX += 10;
-
-                    yield return new WaitForSeconds(.5f);
-                }                
+                jogador.Rig.linearVelocityX += 10;
             }
             else
             {
-                StartCoroutine(TempoAvancoControle());
-
-                while (jogador.Avanco)
-                {
-                    Debug.Log("Avanco");
-                    jogador.Rig.linearVelocityX -= 10;
-
-                    yield return new WaitForSeconds(.5f);
-                }   
+                jogador.Rig.linearVelocityX -= 10;
             }
         }
 
@@ -101,6 +91,8 @@ public sealed class MovimentacaoJogador : MonoBehaviour
     private IEnumerator TempoAvancoControle()
     {
         yield return new WaitForSeconds(jogador.TempoAvanco);
+
+        jogador.Anim.SetBool(HashCodesAnimator.dashAnim, false);
 
         jogador.Avanco = false;
     }
