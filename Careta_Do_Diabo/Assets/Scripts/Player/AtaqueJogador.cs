@@ -23,7 +23,6 @@ public sealed class AtaqueJogador : MonoBehaviour
     {
         if (jogador.JogadorAtacando)
         {
-            Debug.Log("jogado Atacando");
             jogador.JogadorAtacando = false;
             jogador.PodeAtacar = false;
 
@@ -65,9 +64,7 @@ public sealed class AtaqueJogador : MonoBehaviour
 
         if (jogador.HitInimigo.collider != null)
         {
-            Debug.Log(jogador.HitInimigo.collider.gameObject.name);
-
-            jogador.HitInimigo.collider.GetComponent<Inimigo>().LevouDano();
+            jogador.HitInimigo.collider.GetComponent<Inimigo>().DanoRecebido();
         }
     }
 

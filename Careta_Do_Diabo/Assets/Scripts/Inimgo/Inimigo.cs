@@ -1,82 +1,32 @@
-using System.Collections;
 using UnityEngine;
 
-public sealed class Inimigo : MonoBehaviour
+public sealed class Inimigo : InimigoControle
 {
-    [SerializeField] private Animator anim;
-    [SerializeField] private SpriteRenderer spr;
-    [SerializeField] private Transform posL;
-    [SerializeField] private Transform posR;
+    void FixedUpdate()
+    {
+        Movimentacao();
+        PercepcaoInimigo();
 
-    [SerializeField] private int vida;
-    [SerializeField] private float velocidade;
-    private bool danoLevado;
-
-    private RaycastHit2D chaoDetector;
+        if (!Spr.flipX)
+        {
+            StartCoroutine(Ataque(1));
+        }
+        else
+        {
+            StartCoroutine(Ataque(-1));
+        }
+    }
 
     void Update()
     {
-        Movimentacao();
-    }
-
-    private void Movimentacao()
-    {
-        transform.Translate(Time.deltaTime * velocidade * Vector2.right);
-
-        anim.SetBool(HashCodesAnimator.correndoAnim, true);
-
-        if (!spr.flipX)
-        {
-            chaoDetector = Physics2D.Raycast(posR.position, Vector2.down, .1f, LayerMask.GetMask("Chao"));
-
-            if (chaoDetector.collider == null)
-            {
-                spr.flipX = true;
-
-                velocidade *= -1f;
-            }
-        }
-        else
-        {
-            chaoDetector = Physics2D.Raycast(posL.position, Vector2.down, .1f, LayerMask.GetMask("Chao"));
-
-            if (chaoDetector.collider == null)
-            {
-                spr.flipX = false;
-
-                velocidade *= -1f;
-            }
-        }
+        ModoPerseguicao();
     }
 
 
-    public void LevouDano()
+    void OnDrawGizmos()
     {
-        if (vida > 0)
-        {
-            vida--;
-
-            StartCoroutine(ControleDano());
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private IEnumerator ControleDano()
-    {
-        if (!danoLevado)
-        {
-            danoLevado = true;
-
-            anim.SetBool(HashCodesAnimator.danoAnim, true);
-
-            yield return new WaitForSeconds(.53f);
-
-            anim.SetBool(HashCodesAnimator.danoAnim, false);
-
-            danoLevado = false;
-        }
+        Gizmos.color = Color.yellow;
+        //Gizmos.DrawWireSphere(transform.position, 3.8f);
+        Gizmos.DrawRay(transform.position, Vector2.left * 1.4f);
     }
 }
