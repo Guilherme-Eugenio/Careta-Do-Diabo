@@ -60,6 +60,8 @@ public sealed class MovimentacaoJogador : MonoBehaviour
         {
             jogador.PodePular = false;
 
+            jogador.Anim.SetBool(HashCodesAnimator.puloAnim, true);
+
             jogador.Rig.AddForce(Vector2.up * jogador.ForcaPulo, ForceMode2D.Impulse);
         }
     }
@@ -108,6 +110,8 @@ public sealed class MovimentacaoJogador : MonoBehaviour
         else
         {
             jogador.EstaPulando = false;
+
+            jogador.Anim.SetBool(HashCodesAnimator.puloAnim, false);
         }
     }
 }
