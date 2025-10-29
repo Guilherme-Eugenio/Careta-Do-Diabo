@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public sealed class ControleUI : MonoBehaviour
 {
+    public GameObject pauseGameUI;
+
     // 0 - coracao cheio, 1 - coracao pela metade, 2 - coracao vazio
     [SerializeField] private Sprite[] coracaoIma = new Sprite[3];
 

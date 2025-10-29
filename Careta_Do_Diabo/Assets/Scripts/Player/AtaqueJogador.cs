@@ -27,13 +27,14 @@ public sealed class AtaqueJogador : MonoBehaviour
             jogador.PodeAtacar = false;
 
             jogador.Anim.SetBool(HashCodesAnimator.correndoAnim, false);
-            jogador.Anim.SetBool(HashCodesAnimator.atacandoAnim, true);
 
             DetectarInimigo();
 
-            yield return new WaitForSeconds(.3f);
+            yield return new WaitForSeconds(.22f);
 
             jogador.Anim.SetBool(HashCodesAnimator.atacandoAnim, false);
+            jogador.Anim.SetBool(HashCodesAnimator.atacandoBaixoAnim, false);
+            
 
             jogador.PodeAtacar = true;
         }
@@ -43,16 +44,23 @@ public sealed class AtaqueJogador : MonoBehaviour
     {
         if (jogador.EstaPulando && Input.GetKey(KeyCode.S))
         {
+            jogador.Anim.SetBool(HashCodesAnimator.atacandoBaixoAnim, true);
+            jogador.Anim.SetBool(HashCodesAnimator.puloAnim, false);
+
             jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.down, ControleJogador.tamanhoAtaque, LayerMask.GetMask("Inimigo"));
         }
         else
         {
             if (!jogador.Spr.flipX)
             {
+                jogador.Anim.SetBool(HashCodesAnimator.atacandoAnim, true);
+
                 jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.right, ControleJogador.tamanhoAtaque, LayerMask.GetMask("Inimigo"));
             }
             else
             {
+                jogador.Anim.SetBool(HashCodesAnimator.atacandoAnim, true);
+
                 jogador.HitInimigo = Physics2D.Raycast(transform.position, Vector2.left, ControleJogador.tamanhoAtaque, LayerMask.GetMask("Inimigo"));
             }
         }

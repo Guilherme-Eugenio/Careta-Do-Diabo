@@ -110,6 +110,25 @@ public class InimigoControle : MonoBehaviour
     {
         if (perseguicao && !atacando && !danoRecebido)
         {
+
+             if (!spr.flipX)
+            {
+                chaoDetector = Physics2D.Raycast(posR.position, Vector2.down, .1f, LayerMask.GetMask("Chao"));
+
+                if (chaoDetector.collider == null)
+                {
+                    perseguicao = false;
+                }
+            }
+            else
+            {
+                chaoDetector = Physics2D.Raycast(posL.position, Vector2.down, .1f, LayerMask.GetMask("Chao"));
+
+                if (chaoDetector.collider == null)
+                {
+                    perseguicao = false;
+                }
+            }
             StopCoroutine(ParadoOuAndando());
 
             Vector2 distancia = transform.position - posicaoJogador.position;
