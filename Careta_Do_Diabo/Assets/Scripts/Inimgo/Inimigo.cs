@@ -27,6 +27,7 @@ public sealed class Inimigo : InimigoControle
     {
         Gizmos.color = Color.yellow;
         //Gizmos.DrawWireSphere(transform.position, 3.8f);
-        Gizmos.DrawRay(transform.position, Vector2.left * 1.4f);
+        Gizmos.DrawRay(raioDeAtaquePos.position, Vector2.left * 2.1f);
+        Gizmos.DrawRay(posR.position, Vector2.down * .6f);
     }
 }

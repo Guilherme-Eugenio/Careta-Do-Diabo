@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: c7fab62922487ec4ba235e4089bf0d03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4096423367771625104
+    second: careta do diabo logo_0
+  - first:
+      213: 5612397454760202282
+    second: careta do diabo logo_1
+  - first:
+      213: 870311342807506824
+    second: careta do diabo logo_2
+  - first:
+      213: -5309425269013274367
+    second: careta do diabo logo_3
+  - first:
+      213: -1077259139010907737
+    second: careta do diabo logo_4
+  - first:
+      213: 779820241150407123
+    second: careta do diabo logo_5
+  - first:
+      213: 5881139139567646113
+    second: careta do diabo logo_6
+  - first:
+      213: -6515504774768434330
+    second: careta do diabo logo_7
+  - first:
+      213: -161810142050766875
+    second: careta do diabo logo_8
+  - first:
+      213: -1806276623776517190
+    second: careta do diabo logo_9
+  - first:
+      213: 7801081759207103124
+    second: careta do diabo logo_10
+  - first:
+      213: 5671242099890821745
+    second: careta do diabo logo_11
+  - first:
+      213: 2639257193614933100
+    second: careta do diabo logo_12
+  - first:
+      213: -8278250802212195605
+    second: careta do diabo logo_13
+  - first:
+      213: 6655642420395069196
+    second: careta do diabo logo_14
+  - first:
+      213: -8910700675421562054
+    second: careta do diabo logo_15
+  - first:
+      213: 343187965852555465
+    second: careta do diabo logo_16
+  - first:
+      213: 9159063832587196235
+    second: careta do diabo logo_17
+  - first:
+      213: 97347909152175418
+    second: careta do diabo logo_18
+  - first:
+      213: -7255728419354828947
+    second: careta do diabo logo_19
+  - first:
+      213: 6105325319383436995
+    second: careta do diabo logo_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: careta do diabo logo_0
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 711
+        width: 92
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09613a5695b69d830800000000000000
+      internalID: 4096423367771625104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_1
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 710
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20d945dfbd33ed40800000000000000
+      internalID: 5612397454760202282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_2
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 710
+        width: 84
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fd8002e87f31c00800000000000000
+      internalID: 870311342807506824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_3
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 711
+        width: 65
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1012bfe29d12156b0800000000000000
+      internalID: -5309425269013274367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_4
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 710
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a13638458ecc01f0800000000000000
+      internalID: -1077259139010907737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_5
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 710
+        width: 48
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1fd6ea06a72da00800000000000000
+      internalID: 779820241150407123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_6
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 710
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5739843e00e9150800000000000000
+      internalID: 5881139139567646113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_7
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 710
+        width: 90
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663e09f8de64495a0800000000000000
+      internalID: -6515504774768434330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_8
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 710
+        width: 83
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef220a788221cdf0800000000000000
+      internalID: -161810142050766875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_9
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 682
+        width: 164
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab375b11bf0dee6e0800000000000000
+      internalID: -1806276623776517190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_10
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 682
+        width: 312
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a91513782034c60800000000000000
+      internalID: 7801081759207103124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_11
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 682
+        width: 200
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a9b3f64ac44be40800000000000000
+      internalID: 5671242099890821745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_12
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 682
+        width: 509
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cff482f6680a420800000000000000
+      internalID: 2639257193614933100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_13
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 443
+        width: 856
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2bc8461cebd1d80800000000000000
+      internalID: -8278250802212195605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_14
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 285
+        width: 95
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f4baba4879d5c50800000000000000
+      internalID: 6655642420395069196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_15
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 369
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b1aa552f4d65480800000000000000
+      internalID: -8910700675421562054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_16
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 285
+        width: 95
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c894dbf2af33c400800000000000000
+      internalID: 343187965852555465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_17
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 194
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b47dc7867088b1f70800000000000000
+      internalID: 9159063832587196235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 212
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3574a85869d95100800000000000000
+      internalID: 97347909152175418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_19
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 212
+        width: 83
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f16a1f1797e4b90800000000000000
+      internalID: -7255728419354828947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: careta do diabo logo_20
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 194
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce4c04d7097ab450800000000000000
+      internalID: 6105325319383436995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      careta do diabo logo_0: 4096423367771625104
+      careta do diabo logo_1: 5612397454760202282
+      careta do diabo logo_10: 7801081759207103124
+      careta do diabo logo_11: 5671242099890821745
+      careta do diabo logo_12: 2639257193614933100
+      careta do diabo logo_13: -8278250802212195605
+      careta do diabo logo_14: 6655642420395069196
+      careta do diabo logo_15: -8910700675421562054
+      careta do diabo logo_16: 343187965852555465
+      careta do diabo logo_17: 9159063832587196235
+      careta do diabo logo_18: 97347909152175418
+      careta do diabo logo_19: -7255728419354828947
+      careta do diabo logo_2: 870311342807506824
+      careta do diabo logo_20: 6105325319383436995
+      careta do diabo logo_3: -5309425269013274367
+      careta do diabo logo_4: -1077259139010907737
+      careta do diabo logo_5: 779820241150407123
+      careta do diabo logo_6: 5881139139567646113
+      careta do diabo logo_7: -6515504774768434330
+      careta do diabo logo_8: -161810142050766875
+      careta do diabo logo_9: -1806276623776517190
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

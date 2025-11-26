@@ -11,7 +11,11 @@ public sealed class ControleUI : MonoBehaviour
 
     [SerializeField] private Image[] coracoesAtual = new Image[5];
 
+    [SerializeField] private Slider barraDeVidaJog;
+
     [SerializeField] private TextMeshProUGUI textoTeste;
+
+    //private int vidaAtual;
 
     private int indexCoracao;
 
@@ -64,5 +68,14 @@ public sealed class ControleUI : MonoBehaviour
                 coracoesAtual[indexCoracao].sprite = coracaoIma[0];
             }
         }
+    }
+
+    public void AtualizarBarraDeVidaJog(int vida, int vidaMax)
+    {
+        int vidaAtual = vida;
+        vidaAtual = vida/10;
+
+        barraDeVidaJog.value  = vida;
+      
     }
 }

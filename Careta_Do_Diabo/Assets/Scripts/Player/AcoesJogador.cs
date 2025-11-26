@@ -18,7 +18,9 @@ public sealed class AcoesJogador : MonoBehaviour
 
             jogador.Anim.SetBool(HashCodesAnimator.danoAnim, true);
 
-            GameControle.game.ui.PerderCoracaoHUD(jogador.Vida);
+            GameControle.game.ui.AtualizarBarraDeVidaJog(jogador.Vida, ControleJogador.vidaMax);
+
+            //GameControle.game.ui.PerderCoracaoHUD(jogador.Vida);
 
             yield return new WaitForSeconds(.65f);
 

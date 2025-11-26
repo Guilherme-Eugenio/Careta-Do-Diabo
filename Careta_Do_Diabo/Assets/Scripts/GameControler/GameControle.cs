@@ -66,7 +66,7 @@ public sealed class GameControle : MonoBehaviour
         {
             Scene menuInicial = SceneManager.GetSceneByBuildIndex(0);
 
-            if (menuInicial.isLoaded && Input.GetKeyDown(KeyCode.Escape))
+            if (menuInicial.isLoaded && Input.anyKey)
             {
                 comecarJogo = true;
 

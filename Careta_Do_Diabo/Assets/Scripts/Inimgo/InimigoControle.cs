@@ -7,7 +7,8 @@ public class InimigoControle : MonoBehaviour
     [SerializeField] private SpriteRenderer spr;
     [SerializeField] private Animator anim;
     [SerializeField] private Transform posL;
-    [SerializeField] private Transform posR;
+    public Transform posR;
+    public Transform raioDeAtaquePos;
     private Transform posicaoJogador;
 
     [Header("Attibutes")]
@@ -41,23 +42,29 @@ public class InimigoControle : MonoBehaviour
 
             //anim.SetBool(HashCodesAnimator.correndoAnim, true);
 
-            if (!spr.flipX)
+            if (posR.gameObject.activeSelf)
             {
                 chaoDetector = Physics2D.Raycast(posR.position, Vector2.down, .1f, LayerMask.GetMask("Chao"));
 
                 if (chaoDetector.collider == null)
-                {
-                    spr.flipX = true;
+                {  
+                    posR.gameObject.SetActive(false);
+                    posL.gameObject.SetActive(true);
 
+                    spr.flipX = true;
+                    
                     velocidade *= -1;
                 }
             }
-            else
+            else if(posL.gameObject.activeSelf)
             {
                 chaoDetector = Physics2D.Raycast(posL.position, Vector2.down, .1f, LayerMask.GetMask("Chao"));
 
                 if (chaoDetector.collider == null)
                 {
+                    posR.gameObject.SetActive(true);
+                    posL.gameObject.SetActive(false);
+
                     spr.flipX = false;
 
                     velocidade *= -1;
@@ -156,7 +163,7 @@ public class InimigoControle : MonoBehaviour
     {
         if (prepararAtaque && !danoRecebido)
         {
-            deteccaoAtaque = Physics2D.Raycast(transform.position, new(direcao, 0), 1.4f, LayerMask.GetMask("Player"));
+            deteccaoAtaque = Physics2D.Raycast(raioDeAtaquePos.position, new(direcao, 0), 2.1f, LayerMask.GetMask("Player"));
 
             if (deteccaoAtaque.collider != null)
             {
@@ -168,7 +175,7 @@ public class InimigoControle : MonoBehaviour
 
                 yield return new WaitForSeconds(.65f);
 
-                deteccaoAtaque = Physics2D.Raycast(transform.position, new(direcao, 0), 1.4f, LayerMask.GetMask("Player"));
+                deteccaoAtaque = Physics2D.Raycast(raioDeAtaquePos.position, new(direcao, 0), 2.3f, LayerMask.GetMask("Player"));
 
                 if (deteccaoAtaque.collider != null)
                 {

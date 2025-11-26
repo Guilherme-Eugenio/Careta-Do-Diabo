@@ -10,6 +10,7 @@ public sealed class ControleJogador : MonoBehaviour
 
     [Header("Atributos")]
     [SerializeField] private int vida;
+    public static int vidaMax = 10;
 
     [SerializeField] private float velocidade;
     [SerializeField] private float forcaPulo;
